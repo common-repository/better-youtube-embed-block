@@ -1,0 +1,56 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "boldblocks/youtube-block",
+  "title": "YouTube Block - A better way to embed YouTube video, short, playlist",
+  "category": "media",
+  "description": "Embed YouTube videos without slowing down your site.",
+  "keywords": [
+    "youtube",
+    "video",
+    "embed",
+    "insert"
+  ],
+  "attributes": {
+    "url": {
+      "type": "string",
+      "__experimentalRole": "content"
+    },
+    "caption": {
+      "type": "string",
+      "source": "html",
+      "selector": "figcaption",
+      "__experimentalRole": "content"
+    },
+    "aspectRatio": {
+      "type": "string",
+      "default": "",
+      "__experimentalRole": "content"
+    },
+    "isMaxResThumbnail": {
+      "type": "boolean",
+      "__experimentalRole": "content"
+    },
+    "customThumbnail": {
+      "type": "string",
+      "__experimentalRole": "content"
+    },
+    "settings": {
+      "type": "object"
+    }
+  },
+  "supports": {
+    "align": true,
+    "spacing": {
+      "margin": true
+    },
+    "interactivity": {
+      "clientNavigation": true
+    }
+  },
+  "textdomain": "better-youtube-embed-block",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./frontend.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./style-index.css"
+}

@@ -1,0 +1,29 @@
+// Adjust the default margin bottom
+.components-base-control.custom-video-thumbnail {
+  margin-bottom: 8px;
+}
+// Make the background dropdown behind the media modal
+.components-popover.byeb-dropdown {
+  z-index: 150000;
+}
+// Make the dropdown a bit larger
+.byeb-dropdown .components-popover__content {
+  min-width: 300px;
+  padding: 12px;
+}
+
+.byeb-multiple-mode {
+  border: 1px solid var(--wp-components-color-gray-600, #949494) !important;
+
+  &:hover {
+    border-color: var(--wp-components-color-gray-700, #757575) !important;
+  }
+
+  &:focus-within {
+    border-color: var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+    box-shadow: 0 0 0 0.5px var(--wp-components-color-accent, var(--wp-admin-theme-color, #3858e9));
+    z-index: 1;
+    outline: transparent solid 2px;
+    outline-offset: -2px;
+  }
+}
